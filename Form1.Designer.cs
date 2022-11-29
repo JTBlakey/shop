@@ -262,7 +262,7 @@
             // 
             this.groupBox1.Location = new System.Drawing.Point(428, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(264, 117);
+            this.groupBox1.Size = new System.Drawing.Size(264, 177);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "What you have selected:";
