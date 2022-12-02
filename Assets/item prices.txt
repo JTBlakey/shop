@@ -1,8 +1,8 @@
-Item Prices:
-pencil £0.05
-ruler 6in/12in £0.35 £0.40
-pencil case £0.60
-highlighter £0.45
-pen £0.10
-rubber £0.10
-pencil sharpener £0.15
+ï»¿Item Prices:
+pencil Â£0.05
+ruler 6in/12in Â£0.35 Â£0.40
+pencil case Â£0.60
+highlighter Â£0.45
+pen Â£0.10
+rubber Â£0.10
+pencil sharpener Â£0.15
