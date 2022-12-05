@@ -67,7 +67,7 @@ namespace shop
 		}*/
 		private void button12_Click(object sender, EventArgs e)
 		{
-			Button button = (Button)sender;
+			Button button = (Button)sender;//i dont really
 			groupBox1.Text = groupBox1.Text + "PENCIL CASE £0.60";
 		}
 		private void groupBox1_Enter(object sender, EventArgs e)
@@ -162,11 +162,11 @@ namespace shop
 
 		private void button20_Click(object sender, EventArgs e) //current stock
 		{
-            groupBox1.Text = "";
-            string allStock = "";
+            groupBox1.Text = "";//clears box
+            string allStock = "";//creates string for current stock
             foreach (string sockStock in sockArrayStock)
-                allStock += sockStock + "\r\n";
-            groupBox1.Text = groupBox1.Text + allStock;
+                allStock += sockStock + "\r\n";//adds the stock array to the string that was set up
+            groupBox1.Text = groupBox1.Text + allStock;//prints the current stock
         }
 	}
 }
