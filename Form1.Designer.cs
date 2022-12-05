@@ -50,6 +50,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button20 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -252,9 +253,9 @@
             // 
             this.button1.Location = new System.Drawing.Point(-1, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(219, 117);
+            this.button1.Size = new System.Drawing.Size(112, 117);
             this.button1.TabIndex = 19;
-            this.button1.Text = "Stock";
+            this.button1.Text = "Stock prices";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -268,11 +269,22 @@
             this.groupBox1.Text = "What you have selected:";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(108, 0);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(110, 117);
+            this.button20.TabIndex = 39;
+            this.button20.Text = "Current stock";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 463);
+            this.Controls.Add(this.button20);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.button18);
@@ -324,5 +336,6 @@
         private Button button2;
         private Button button1;
         private GroupBox groupBox1;
+        private Button button20;
     }
 }
