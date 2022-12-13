@@ -1,1 +1,12 @@
-﻿pencilcase 10
+﻿pencilcase, 10
+pencil, 10
+ruler 6in, 10
+ruler 12in, 10
+pencil case, 10
+highlighter Y, 10
+highlighter G, 10
+highlighter R, 10
+pen Black, 10
+pen Blue, 10
+rubber, 10
+pencil sharpener, 10

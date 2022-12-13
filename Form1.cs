@@ -7,7 +7,7 @@ namespace shop
 		{
 			InitializeComponent();
 
-			sockArrayStock = loadStock();
+			sockArrayStock = LoadStock();
 
 		}
 		private void pictureBox1_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace shop
 			groupBox1.Text = groupBox1.Text + text;
 		}
 
-		public string[] loadStock()
+		public string[] LoadStock()
 		{
 			StreamReader reader = new StreamReader("./Assets/stock.txt", System.Text.Encoding.UTF8);// open the file
 			string[] stock = reader.ReadToEnd().Split("\r\n");
@@ -168,5 +168,10 @@ namespace shop
                 allStock += sockStock + "\r\n";//adds the stock array to the string that was set up
             groupBox1.Text = groupBox1.Text + allStock;//prints the current stock
         }
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
