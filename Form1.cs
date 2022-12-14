@@ -2,7 +2,7 @@ namespace shop
 {
 	public partial class Form1 : Form
 	{
-		public string[] sockArrayStock;
+		public Dictionary<string, int> sockArrayStock;
 		public Form1()
 		{
 			InitializeComponent();
@@ -39,12 +39,23 @@ namespace shop
 			groupBox1.Text = groupBox1.Text + text;
 		}
 
-		public string[] LoadStock()
+		public Dictionary<string, int> LoadStock()
 		{
 			StreamReader reader = new StreamReader("./Assets/stock.txt", System.Text.Encoding.UTF8);// open the file
-			string[] stock = reader.ReadToEnd().Split("\r\n");
+			string[] stock = reader.ReadToEnd().Split("\r\n");//creates the array named stock 
+
+			Dictionary<string, int> stockLevels = new Dictionary<string, int>();//creates a dictionary called stock levels containing item and stock of item
+
+			for (int i = 0; i < stock.Length; i++)
+			{
+				string[] item = stock[i].Split(',');
+
+				stockLevels.Add(item[0], Convert.ToInt32(item[1]));
+			}
+
 			reader.Close();
-			return stock;
+			
+			return stockLevels;
 		}   
 
 /*        public void EditStock(string fileName, string word, string replacement, string saveFileName)
@@ -164,8 +175,8 @@ namespace shop
 		{
             groupBox1.Text = "";//clears box
             string allStock = "";//creates string for current stock
-            foreach (string sockStock in sockArrayStock)
-                allStock += sockStock + "\r\n";//adds the stock array to the string that was set up
+            foreach (KeyValuePair<string, int> sockStock in sockArrayStock)
+                allStock += sockStock.Key + " - " + sockStock.Value.ToString() + "\r\n";//adds the stock array to the string that was set up
             groupBox1.Text = groupBox1.Text + allStock;//prints the current stock
         }
 
