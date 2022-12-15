@@ -22,7 +22,7 @@ namespace shop
 
 		private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
 		{
-			
+
 		}
 
 		private void button1_Click_1(object sender, EventArgs e) //stock prices
@@ -35,7 +35,7 @@ namespace shop
 			{
 				text = sr.ReadToEnd();
 			}
-		// write the string to the box.
+			// write the string to the box.
 			groupBox1.Text = groupBox1.Text + text;
 		}
 
@@ -54,34 +54,41 @@ namespace shop
 			}
 
 			reader.Close();
-			
+
 			return stockLevels;
-		}   
+		}
 
-/*        public void EditStock(string fileName, string word, string replacement, string saveFileName)
+		public void EditStock(string item)//to change the stock
 		{
-			StreamReader reader = new StreamReader("./Assets/" + fileName);
-			string input = reader.ReadToEnd();
-			reader.Close();
+            sockArrayStock[item] = sockArrayStock[item] - 1;//takes one away from the stock for that item
+        }
 
-			using (StreamWriter writer = new StreamWriter("./Assets/" + fileName, true))
-			{
-				{
-					TextWriter tw = new StreamWriter("TextFile.txt", false);
-					tw.Write(string.Empty);
-					string output = input.Replace(word, replacement);
-					File.Delete("stock.txt");
-					writer.Write(output);
-				}
-				writer.Close();
-			}
-		}*/
+  //      public void EditStock(string fileName, string word, string replacement, string saveFileName)
+		//{
+		//	StreamReader reader = new StreamReader("./Assets/" + fileName);
+		//	string input = reader.ReadToEnd();
+		//	reader.Close();
+
+		//	using (StreamWriter writer = new StreamWriter("./Assets/" + fileName, true))
+		//	{
+		//		{
+		//			TextWriter tw = new StreamWriter("TextFile.txt", false);
+		//			tw.Write(string.Empty);
+		//			string output = input.Replace(word, replacement);
+		//			File.Delete("stock.txt");
+		//			writer.Write(output);
+		//		}
+		//		writer.Close();
+		//	}
+		//}
 		private void button12_Click(object sender, EventArgs e)
 		{
-			Button button = (Button)sender;//i dont really
-			groupBox1.Text = groupBox1.Text + "PENCIL CASE £0.60";
-		}
-		private void groupBox1_Enter(object sender, EventArgs e)
+            Button button = (Button)sender;//i dont really know what this does but i think it is needed
+            groupBox1.Text = groupBox1.Text + "PENCIL CASE £0.60";// adds this text to the text in the box
+			string item = ("pencilcase");
+            EditStock(item);
+        }
+        private void groupBox1_Enter(object sender, EventArgs e)
 		{
 
 		}
@@ -95,14 +102,17 @@ namespace shop
 		{
 			Button button = (Button)sender;
 			groupBox1.Text = groupBox1.Text + "PEN £0.10";
-
-		}
+            string item = ("pen Black");
+			EditStock(item);
+        }
 
 		private void button8_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
 			groupBox1.Text = groupBox1.Text + "PEN £0.10";
-		}
+            string item = ("pen Blue");
+            EditStock(item);
+        }
 
 		private void button4_Click(object sender, EventArgs e)
 		{
@@ -113,13 +123,17 @@ namespace shop
 		{
 			Button button = (Button)sender;
 			groupBox1.Text = groupBox1.Text + "Ruler £0.35";
-		}
+            string item = ("ruler 6in");
+            EditStock(item);
+        }
 
 		private void button9_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
 			groupBox1.Text = groupBox1.Text + "Ruler £0.40";
-		}
+            string item = ("ruler 12in");
+            EditStock(item);
+        }
 
 		private void button6_Click(object sender, EventArgs e)
 		{
@@ -131,19 +145,25 @@ namespace shop
 		{
 			Button button = (Button)sender;
 			groupBox1.Text = groupBox1.Text + "HIGHLIGHTER Y £0.45";
-		}
+            string item = ("highlighter Y");
+            EditStock(item);
+        }
 
 		private void button10_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
 			groupBox1.Text = groupBox1.Text + "HIGHLIGHTER G £0.45";
-		}
+            string item = ("highlighter G");
+            EditStock(item);
+        }
 
 		private void button11_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
 			groupBox1.Text = groupBox1.Text + "HIGHLIGHTER R £0.45";
-		}
+            string item = ("highlighter R");
+            EditStock(item);
+        }
 
 
 
@@ -151,19 +171,25 @@ namespace shop
 		{
 			Button button = (Button)sender;
 			groupBox1.Text = groupBox1.Text + "PENCIL £0.05";
-		}
+            string item = ("pencil");
+            EditStock(item);
+        }
 		
 		private void button16_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
 			groupBox1.Text = groupBox1.Text + "PENCIL SHARPENER £0.15";
-		}
+            string item = ("pencil sharpener");
+            EditStock(item);
+        }
 
 		private void button17_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
 			groupBox1.Text = groupBox1.Text + "RUBBER £0.10";
-		}
+            string item = ("rubber");
+            EditStock(item);
+        }
 
 		private void button15_Click(object sender, EventArgs e)
 		{
@@ -175,10 +201,10 @@ namespace shop
 		{
             groupBox1.Text = "";//clears box
             string allStock = "";//creates string for current stock
-            foreach (KeyValuePair<string, int> sockStock in sockArrayStock)
-                allStock += sockStock.Key + " - " + sockStock.Value.ToString() + "\r\n";//adds the stock array to the string that was set up
+            foreach (KeyValuePair<string, int> itemAndStock in sockArrayStock)
+                allStock += itemAndStock.Key + " - " + itemAndStock.Value.ToString() + "\r\n";//adds the stock array to the string that was set up
             groupBox1.Text = groupBox1.Text + allStock;//prints the current stock
-        }
+		}
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
