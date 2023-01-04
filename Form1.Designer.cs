@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button19 = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button20 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -259,11 +261,12 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(12, 111);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(206, 57);
             this.button2.TabIndex = 20;
-            this.button2.Text = "Pen";
+            this.button2.Text = "\r\n";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -280,12 +283,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(428, 0);
+            this.groupBox1.Location = new System.Drawing.Point(428, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(264, 228);
+            this.groupBox1.Size = new System.Drawing.Size(264, 187);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "What you have selected:";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button20
@@ -299,11 +301,21 @@
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(428, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(264, 23);
+            this.textBox1.TabIndex = 40;
+            this.textBox1.Text = "What you have selected:";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 463);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button20);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button19);
@@ -331,6 +343,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -358,5 +371,6 @@
         private Button button1;
         private GroupBox groupBox1;
         private Button button20;
+        private TextBox textBox1;
     }
 }
