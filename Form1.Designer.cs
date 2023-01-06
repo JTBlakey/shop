@@ -97,22 +97,22 @@
             // button17
             // 
             this.button17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button17.Image = global::shop.Properties.Resources.rubber;
             this.button17.Location = new System.Drawing.Point(225, 343);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(197, 108);
             this.button17.TabIndex = 35;
-            this.button17.Text = "Rubber";
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button16
             // 
             this.button16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button16.Image = global::shop.Properties.Resources.pencil_sharpener;
             this.button16.Location = new System.Drawing.Point(225, 226);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(197, 111);
             this.button16.TabIndex = 34;
-            this.button16.Text = "Pencil Sharpener";
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
@@ -123,7 +123,7 @@
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(183, 111);
             this.button15.TabIndex = 33;
-            this.button15.Text = "Void";
+            this.button15.Text = "Clear";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
@@ -140,22 +140,22 @@
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button13.Image = global::shop.Properties.Resources.pencil;
             this.button13.Location = new System.Drawing.Point(225, 111);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(197, 109);
             this.button13.TabIndex = 31;
-            this.button13.Text = "Pencil";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button12
             // 
             this.button12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button12.Image = global::shop.Properties.Resources.pencil_case;
             this.button12.Location = new System.Drawing.Point(224, 12);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(198, 93);
             this.button12.TabIndex = 30;
-            this.button12.Text = "Pencil Case";
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
@@ -217,11 +217,11 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button6.Image = global::shop.Properties.Resources.highlighter;
             this.button6.Location = new System.Drawing.Point(12, 343);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(207, 66);
             this.button6.TabIndex = 24;
-            this.button6.Text = "Highlighter";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -239,11 +239,11 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button4.Image = global::shop.Properties.Resources.ruler;
             this.button4.Location = new System.Drawing.Point(12, 226);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(206, 66);
             this.button4.TabIndex = 22;
-            this.button4.Text = "Ruler";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
