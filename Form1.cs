@@ -231,7 +231,13 @@ namespace shop
 
 		private void button19_Click(object sender, EventArgs e)//subtotal
 		{
-            groupBox1.Text = ((decimal)totalcost / 100).ToString("C2");
+            groupBox1.Text += " Total price is ";
+			groupBox1.Text += ((decimal)totalcost / 100).ToString("C2");
 		}
-	}
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            groupBox1.Text = "Your receipt has been printed";
+        }
+    }
 }
