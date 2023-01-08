@@ -85,7 +85,7 @@ namespace shop
 		private void button12_Click(object sender, EventArgs e)
 		{
             Button button = (Button)sender;//i dont really know what this does but i think it is needed
-            groupBox1.Text = groupBox1.Text + "PENCIL CASE £0.60";// adds this text to the text in the box
+            groupBox1.Text += " PENCIL CASE £0.60";// adds this text to the text in the box
 			string item = ("pencilcase");
             EditStock(item);
             totalcost += 60;
@@ -97,13 +97,13 @@ namespace shop
 		private void button2_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			groupBox1.Text = groupBox1.Text + "Please select a colour";
+			groupBox1.Text += " Please select a colour";
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			groupBox1.Text = groupBox1.Text + "PEN £0.10";
+			groupBox1.Text += " PEN £0.10";
             string item = ("pen Black");
 			EditStock(item);
             totalcost += 10;
@@ -112,7 +112,7 @@ namespace shop
 		private void button8_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			groupBox1.Text = groupBox1.Text + "PEN £0.10";
+			groupBox1.Text += " PEN £0.10";
             string item = ("pen Blue");
             EditStock(item);
             totalcost += 10;
@@ -121,12 +121,12 @@ namespace shop
 		private void button4_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			groupBox1.Text = groupBox1.Text + "Please select a length";
+			groupBox1.Text += " Please select a length";
 		}
 		private void button5_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			groupBox1.Text = groupBox1.Text + "Ruler £0.35";
+			groupBox1.Text += " Ruler £0.35";
             string item = ("ruler 6in");
             EditStock(item);
             totalcost += 35;
@@ -135,7 +135,7 @@ namespace shop
 		private void button9_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			groupBox1.Text = groupBox1.Text + "Ruler £0.40";
+			groupBox1.Text += " Ruler £0.40";
             string item = ("ruler 12in");
             EditStock(item);
             totalcost += 40;
@@ -144,13 +144,13 @@ namespace shop
 		private void button6_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			groupBox1.Text = groupBox1.Text + "Please select a colour";
+			groupBox1.Text += " Please select a colour";
 		}
 
 		private void button7_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			groupBox1.Text = groupBox1.Text + "HIGHLIGHTER Y £0.45";
+			groupBox1.Text += " HIGHLIGHTER Y £0.45";
             string item = ("highlighter Y");
             EditStock(item);
             totalcost += 45;
@@ -159,7 +159,7 @@ namespace shop
 		private void button10_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			groupBox1.Text = groupBox1.Text + "HIGHLIGHTER G £0.45";
+			groupBox1.Text += " HIGHLIGHTER G £0.45";
             string item = ("highlighter G");
             EditStock(item);
             totalcost += 45;
@@ -168,7 +168,7 @@ namespace shop
 		private void button11_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			groupBox1.Text = groupBox1.Text + "HIGHLIGHTER R £0.45";
+			groupBox1.Text += " HIGHLIGHTER R £0.45";
             string item = ("highlighter R");
             EditStock(item);
             totalcost += 45;
@@ -179,7 +179,7 @@ namespace shop
 		private void button13_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			groupBox1.Text += "PENCIL £0.05";
+			groupBox1.Text += " PENCIL £0.05";
             string item = ("pencil");
             EditStock(item);
 			totalcost += 5;
@@ -188,7 +188,7 @@ namespace shop
 		private void button16_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			groupBox1.Text = groupBox1.Text + "PENCIL SHARPENER £0.15";
+			groupBox1.Text += " PENCIL SHARPENER £0.15";
             string item = ("pencil sharpener");
             EditStock(item);
             totalcost += 15;
@@ -197,7 +197,7 @@ namespace shop
 		private void button17_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			groupBox1.Text = groupBox1.Text + "RUBBER £0.10";
+			groupBox1.Text += " RUBBER £0.10";
             string item = ("rubber");
             EditStock(item);
             totalcost += 10;
@@ -207,6 +207,7 @@ namespace shop
 		{
 			Button button = (Button)sender;
 			groupBox1.Text = "What you have selected:";
+			totalcost = 0;
 		}
 
 		private void button20_Click(object sender, EventArgs e) //current stock
