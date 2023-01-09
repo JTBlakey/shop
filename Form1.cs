@@ -82,13 +82,13 @@ namespace shop
 		//		writer.Close();
 		//	}
 		//}
-		private void button12_Click(object sender, EventArgs e)
+		private void button12_Click(object sender, EventArgs e)// pencil case
 		{
-            Button button = (Button)sender;//i dont really know what this does but i think it is needed
+            Button button = (Button)sender;
             groupBox1.Text += " PENCIL CASE £0.60";// adds this text to the text in the box
-			string item = ("pencilcase");
-            EditStock(item);
-            totalcost += 60;
+			string item = ("pencilcase"); // the name of the item to be used in the function below
+            EditStock(item); // the function to change the stock
+            totalcost += 60; // adds to the total cost of the items selected
         }
         private void groupBox1_Enter(object sender, EventArgs e)
 		{
